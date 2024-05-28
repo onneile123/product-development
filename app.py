@@ -8,7 +8,7 @@ USER_PASS_MAPPING={
 }
 
 app = dash.Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
-
+server = app.server
 auth = dash_auth.BasicAuth(app, USER_PASS_MAPPING)
 
 navbar = dbc.NavbarSimple(
